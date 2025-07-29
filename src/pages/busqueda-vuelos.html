@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de Vuelos - Agencia de Viajes</title>
+    <link rel="stylesheet" href="../styles/busqueda-vuelos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Buscar Vuelos ✈️</h1>
+        
+        <form id="flight-search-form" class="search-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="origin">Ciudad de Origen:</label>
+                    <input type="text" id="origin" name="origin" placeholder="Ej: Santiago" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="destination">Ciudad de Destino:</label>
+                    <input type="text" id="destination" name="destination" placeholder="Ej: Madrid" required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="departure-date">Fecha de Ida:</label>
+                    <input type="date" id="departure-date" name="departureDate" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="return-date">Fecha de Vuelta:</label>
+                    <input type="date" id="return-date" name="returnDate">
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="passengers">Pasajeros:</label>
+                    <select id="passengers" name="passengers">
+                        <option value="1">1 Pasajero</option>
+                        <option value="2">2 Pasajeros</option>
+                        <option value="3">3 Pasajeros</option>
+                        <option value="4">4 Pasajeros</option>
+                        <option value="5">5+ Pasajeros</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="class">Clase:</label>
+                    <select id="class" name="class">
+                        <option value="economy">Económica</option>
+                        <option value="business">Ejecutiva</option>
+                        <option value="first">Primera Clase</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button type="submit" class="search-button">Buscar Vuelos</button>
+        </form>
+        
+        <div id="results" class="results-container" style="display: none;">
+            <h2>Resultados de Búsqueda</h2>
+            <div id="flights-list"></div>
+        </div>
+    </div>
+    
+    <script src="../components/flightSearch.js"></script>
+</body>
+</html>
