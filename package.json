@@ -1,0 +1,14 @@
+{
+  "name": "agencia-de-viajes",
+  "version": "0.1.0",
+  "description": "Sistema de búsqueda y reserva de vuelos",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["viajes", "vuelos", "reservas"],
+  "author": "Nico Perez",
+  "license": "Apache-2.0"
+}
